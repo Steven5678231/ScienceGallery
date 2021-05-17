@@ -7,8 +7,9 @@ import ToolBar from "../components/ToolBar";
 import { connect } from "react-redux";
 import { surveyJSON } from "../components/Survey_JSON";
 import * as Survey from "survey-react";
-var FileSaver = require("file-saver");
+import bgPic from "../background2.png";
 
+var FileSaver = require("file-saver");
 class MediaBridge extends Component {
   constructor(props) {
     super(props);
@@ -44,9 +45,9 @@ class MediaBridge extends Component {
     this.startRecording = this.startRecording.bind(this);
     this.stopRecording = this.stopRecording.bind(this);
     this.saveVideo = this.saveVideo.bind(this);
-
     Survey.StylesManager.applyTheme("winter");
     this.model = new Survey.Model(surveyJSON);
+
     // this.setControlParams = this.setControlParams.bind(this);
   }
   componentDidMount() {
@@ -237,7 +238,22 @@ class MediaBridge extends Component {
       ctx.clearRect(0, 0, this.canvasRef.width, this.canvasRef.height);
     } else {
       ctx.fillStyle = "black";
-      ctx.fillRect(0, 0, this.canvasRef.width, this.canvasRef.height);
+      // ctx.fillRect(0, 0, this.canvasRef.width, this.canvasRef.height);
+      ctx.drawImage(
+        this.picRef,
+        0,
+        0,
+        this.canvasRef.width,
+        this.canvasRef.height
+      );
+      // ctx.drawImage(
+      //   this.picRef,
+      //   0,
+      //   0,
+      //   this.canvasRef.width,
+      //   this.canvasRef.height
+      // );
+
       const {
         leftEyeAttributes,
         rightEyeAttributes,
@@ -507,6 +523,11 @@ class MediaBridge extends Component {
             />
           )}
         </div>
+        <img
+          ref={(ref) => (this.picRef = ref)}
+          src={bgPic}
+          // style={{ visibility: "hidden" }}
+        />
       </div>
     );
   }
