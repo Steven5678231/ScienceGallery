@@ -97,6 +97,10 @@ io.sockets.on("connection", (socket) => {
     const params_room = data.match.params.room;
     // socket.broadcast.to(params_room).emit("hangup");
   });
+
+  socket.on("projection", (data) => {
+    console.log(data);
+  });
   socket.on("leave", () => {
     // sending to all clients in the room (channel) except sender
     socket.broadcast.to(room).emit("hangup");
