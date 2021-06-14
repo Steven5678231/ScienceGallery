@@ -7,6 +7,7 @@ import Home from "./containers/HomePage";
 import Room from "./containers/RoomPage";
 import DashBoard from "./containers/DashBoard";
 import RoomControl from "./containers/RoomControl";
+import Projection from "./components/Projection";
 import SurveyPage from "./components/SurveyPage";
 import NotFound from "./components/NotFound";
 
@@ -21,6 +22,7 @@ render(
         {/* <Route path="*" component={NotFound} /> */}
         <Route exact path="/dashboard" component={DashBoard} />
         <Route exact path="/control/:room" component={RoomControl} />
+        <Route exact path="/projection" component={Projection} />
         {/* <Route exact path="/survey/:room" component={SurveyPage} /> */}
         {/* <Route path="/survey/:room"/>  */}
       </Switch>
