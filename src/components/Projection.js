@@ -1,7 +1,7 @@
 import React from "react";
 import io from "socket.io-client";
 import P5Wrapper from "react-p5-wrapper";
-import { sketch } from "./ProjectionSnow";
+import { sketch } from "./ProjectionSunset";
 import { surveyJSON } from "./Survey_JSON";
 import * as Survey from "survey-react";
 
