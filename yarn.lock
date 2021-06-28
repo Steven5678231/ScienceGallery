@@ -3923,13 +3923,6 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
-"react-dom@*", "react-dom@^16.5.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@>=16.0.0", "react-dom@>=16.6.0", "react-dom@>=16.7.0":
-  "version" "17.0.1"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "scheduler" "^0.20.1"
-
 "react-dom@^15.3.1":
   "integrity" "sha512-mpjXqC2t1FuYsILOLCj0kg6pbg460byZkVA/80VtDmKU/pYmoTdHOtaMcTRIDiyXLz4sIur0cQ04nOC6iGndJg=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-15.7.0.tgz"
@@ -3939,6 +3932,13 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.0"
     "prop-types" "^15.5.10"
+
+"react-dom@^16.5.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@>=16.0.0", "react-dom@>=16.6.0", "react-dom@>=16.7.0":
+  "version" "17.0.1"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+    "scheduler" "^0.20.1"
 
 "react-file-reader@^1.1.4":
   "integrity" "sha512-xTeHFrDIopZpzk4aMZyILzIQbytQ6GCKR32/7kBDzO5lrAr1idbK5PkmpjP4wnT9s5F+TALviuhnWk8UeksddA=="
@@ -3969,13 +3969,6 @@
     "classnames" "^1.2.0"
     "prop-types" "^15.5.10"
     "react-dom" "^15.3.1"
-
-"react-p5-wrapper@^2.4.1":
-  "integrity" "sha512-sCxG5LTK7qymrr7mK2OE5KRpcbEybpz2SFBK4RM+eCfTjwgRjc/o9MqXz9qgM/W7/eISTCycRT9S1WdBIiQPEg=="
-  "resolved" "https://registry.npmjs.org/react-p5-wrapper/-/react-p5-wrapper-2.4.1.tgz"
-  "version" "2.4.1"
-  dependencies:
-    "p5" "^1.3.1"
 
 "react-redux@^5.0.7":
   "integrity" "sha512-Ns1G0XXc8hDyH/OcBHOxNgQx9ayH3SPxBnFCOidGKSle8pKihysQw2rG/PmciUQRoclhVBO8HMhiRmGXnDja9Q=="
@@ -4031,7 +4024,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^15.3.1", "react@^15.7.0", "react@^16.4.0", "react@^16.5.0", "react@^16.8.0 || ^17.0.0", "react@>=15", "react@>=16.0.0", "react@>=16.6.0", "react@17.0.1":
+"react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^15.3.1", "react@^15.7.0", "react@^16.4.0", "react@^16.5.0", "react@^16.8.0 || ^17.0.0", "react@>=15", "react@>=16.0.0", "react@>=16.6.0", "react@17.0.1":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
@@ -4811,11 +4804,6 @@
   "integrity" "sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c="
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
-
-"typescript@^4.3.2":
-  "integrity" "sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw=="
-  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.3.2.tgz"
-  "version" "4.3.2"
 
 "ua-parser-js@^0.7.18":
   "version" "0.7.24"
