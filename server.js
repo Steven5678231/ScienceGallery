@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const nano = require("nano")("http://admin:158131@localhost:5984");
 
 var surveyRouter = require("./backend/routes/survey");
+var projectionRouter = require("./backend/routes/projection");
 var indexRouter = require("./backend/routes");
 // authenticate
 
@@ -47,6 +48,7 @@ app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "backend", "public")));
 
 app.use("/survey", surveyRouter);
+app.use("/projection", projectionRouter);
 app.use("/", indexRouter);
 
 // app.use((req, res) => res.sendFile(__dirname + "/dist/index.html"));
