@@ -277,3 +277,13 @@ input[type="text"] {
 .react-switch-label:active .react-switch-button {
   width: 30px;
 }
+
+.mvid {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
