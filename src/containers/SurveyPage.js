@@ -26,7 +26,9 @@ function SurveyPage(props) {
 
   // socket event, room-idle, survey start and ending, process start and stop
   useEffect(() => {
-    const socket = io.connect();
+    const socket = io.connect({
+      reconnection: false,
+    });
     socket.emit("survey-connect", {
       room: props.match.params.room,
       user: props.match.params.user,
@@ -34,6 +36,11 @@ function SurveyPage(props) {
     socket.on("room-idle", () => {
       console.log("room is idle now");
       resetParams();
+    });
+    socket.on("disconnect", () => {
+      console.log("socket disconnect");
+      resetParams();
+      alert("Seems we lost connection, please contact with the manager!");
     });
     socket.on("survey-start", (data) => {
       const { stage } = data;

@@ -23,7 +23,9 @@ class RoomPage extends Component {
     this.state = {
       survey: false,
     };
-    this.socket = io.connect();
+    this.socket = io.connect({
+      reconnection: false,
+    });
 
     console.log("socket create", this.socket);
   }

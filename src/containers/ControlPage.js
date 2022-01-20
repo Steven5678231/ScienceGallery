@@ -22,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ControlPage(props) {
   const room = props.match.params.room;
-  const socket = io.connect();
+  const socket = io.connect({
+    'reconnection':false,
+  });
   const handleControl = (data) => {
     socket.emit("control", { room: room, controlParams: data });
   };

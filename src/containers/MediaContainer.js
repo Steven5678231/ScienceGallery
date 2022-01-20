@@ -128,6 +128,10 @@ class MediaBridge extends Component {
     );
 
     this.props.socket.on("process-start", this.onProcessStart);
+    this.props.socket.on("disconnect", () => {
+      console.log("socket disconnect");
+      alert("Seems we lost connection, please contact with the manager!");
+    });
     this.props.socket.on("process-stop", this.onProcessStop);
     this.props.socket.on("process-control", this.onProcessControl);
     this.props.socket.on("reset", this.onReset);

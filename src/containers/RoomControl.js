@@ -141,8 +141,14 @@ export default function RoomControl(props) {
   const classes = useStyles();
   const room = props.match.params.room;
   useEffect(() => {
-    const socket = io.connect();
+    const socket = io.connect({
+      reconnection: false,
+    });
     socket.emit("control-room", { room: room });
+    socket.on("disconnect", () => {
+      console.log("socket disconnect");
+      alert("Seems we lost connection, please contact with the manager!");
+    });
     socket.on("process-in-progress", (data) => {
       console.log(data);
       let time_diff = data.time_diff;

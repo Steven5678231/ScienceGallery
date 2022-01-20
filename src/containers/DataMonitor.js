@@ -14,7 +14,9 @@ export default function (props) {
   const [data_show, setData_show] = useState();
   const [data_num, setData_num] = useState(0);
   useEffect(() => {
-    const socket = io.connect();
+    const socket = io.connect({
+      reconnection: false,
+    });
     socket.emit("data-connect");
     socket.on("data-retrieve", (data) => {
       setResult(data);

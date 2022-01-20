@@ -19,7 +19,9 @@ export default function ProjectionPage(props) {
   const [videoid, setVideoid] = useState(0);
 
   useEffect(() => {
-    const socket = io.connect();
+    const socket = io.connect({
+      reconnection: false,
+    });
     socket.emit("projection-connect", {
       room: props.match.params.room,
       user: props.match.params.user,
